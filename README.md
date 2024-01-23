@@ -2,8 +2,15 @@
 # Conociendo la esencia del cliente
 La junta directiva de la cadena de supermercados Universal Food ha observado una estabilización en sus ventas y busca comprender cómo mejorar la relación con sus clientes, entendiendo sus hábitos de compra, para ofrecerles un servicio de mayor calidad.
 ## Descripción: 
-Desarrollamos este programa con librerías del lenguaje Python dentro de un notebook de Google Colab con el fin de tomar decisiones de compra y venta de Bitcoin en tiempo real.
-El proyecto consta de los siguientes pasos:
+Desarrollaremos un modelo de machine learning del tipo clusterización para agrupar a los clientes considerando sus características, preferencias y habitos de consumo; para ello contamos con un Dataset que tiene más de 60.000 clientes que contiene sus INGRESOS, DETALLES DE PROMOCIÓN, DATOS DE LA TIENDA, DATOS DE VENTAS, COSTO DE MEDIOS, entre otra información relevante.
+El modelo estara dividido de la siguiente manera:
+* Configuración del ambiente,
+* Obtención y transformación de los datos,
+* Exploración de los datos,
+* Preprocesamiento y obtención de features.
+* Validación de clusters
+* Análisis e interpretación de clusters.
+
 
 ### Configuración del ambiente: 
 Utilizaremos el Jupyter Notebook que ofrece Google Colaboratory, también necesitarás instalar algunas librerías de Python que son esenciales para este proyecto, como: <br>
@@ -11,14 +18,15 @@ Utilizaremos el Jupyter Notebook que ofrece Google Colaboratory, también necesi
 - Numpy 
 - Pandas 
 - Matplotlib
-- Yfinance
-- BeautifulSoup
-- Request
-- Clear_output
-- Time
+- Seaborn
+- SKlearn.preprocessing OneHotEncoder
+- SKlearn.preprocessing StandardScaler
+- SKlearn.cluster KMeans
+- Sklearn.metrics silhouette_score, davies_bouldin_score, calinski_harabasz_score
+
 
 ### Obtención de datos:
-Necesitaremos acceder a la API de Yahoo Finance que proporciona datos históricos de precios de Bitcoin en formato JSON, para esto usaremos la biblioteca yfinance de Python,cuya documentación esta en el siguiente enlace: https://pypi.org/project/yfinance/ <br> 
+Accede a las siguientes URLs para descargar el dataset que estaremos utilizando: https://www.kaggle.com/datasets/ramjasmaurya/medias-cost-prediction-in-foodmart <br> 
 
 ![image](https://github.com/jumacaq/Robot_Trading_BTC-USD/blob/main/yfinance.png))
 
