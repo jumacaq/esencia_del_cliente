@@ -13,7 +13,7 @@ El modelo estara dividido de la siguiente manera:
 
 
 ### Configuración del ambiente: 
-Utilizaremos el Jupyter Notebook que ofrece Google Colaboratory, también necesitarás instalar algunas librerías de Python que son esenciales para este proyecto, como: <br>
+Utilizaré el Jupyter Notebook que ofrece Google Colaboratory, también tendré que instalar algunas librerías de Python que son esenciales para este proyecto, como: <br>
 - Numpy 
 - Pandas 
 - Matplotlib
@@ -25,7 +25,7 @@ Utilizaremos el Jupyter Notebook que ofrece Google Colaboratory, también necesi
 
 
 ### Obtención de datos:
-Accede a las siguientes URLs para descargar el dataset que estaremos utilizando: https://www.kaggle.com/datasets/ramjasmaurya/medias-cost-prediction-in-foodmart <br> 
+Accede a las siguiente URL para descargar el dataset que estaré utilizando: https://www.kaggle.com/datasets/ramjasmaurya/medias-cost-prediction-in-foodmart <br> 
 
 ![image](https://github.com/jumacaq/esencia_del_cliente/blob/main/Kaggle_esencia_cliente.png)
 
