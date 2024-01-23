@@ -28,11 +28,8 @@ Utilizaremos el Jupyter Notebook que ofrece Google Colaboratory, también necesi
 ### Obtención de datos:
 Accede a las siguientes URLs para descargar el dataset que estaremos utilizando: https://www.kaggle.com/datasets/ramjasmaurya/medias-cost-prediction-in-foodmart <br> 
 
-![image](https://github.com/jumacaq/Robot_Trading_BTC-USD/blob/main/yfinance.png))
+![image](https://github.com/jumacaq/esencia_del_cliente/blob/main/Kaggle_esencia_cliente.png)
 
-Luego, utilizando la biblioteca BeautifulSoup realizaremos el Web Scraping de la página https://coinmarketcap.com/ para extraer el precio actual del Bitcoin BTC en dólares USD y la variación de su precio en la última hora, luego crearemos una función que retornará el precio actualizado del Bitcoin y también su tendencia <br>
-<br>
-![image](https://github.com/Valamca/Robot_Trading/assets/129345721/4f3e3df5-1afe-4c40-8610-9589e6d8c10e)
 
 ### Limpieza de datos: 
 Una vez cargados los datos en un DataFrame de Pandas se procede a su tratamiento y manipulación para obtener una base limpia, luego se construye la función que retornará el precio promedio del Bitcoin.
