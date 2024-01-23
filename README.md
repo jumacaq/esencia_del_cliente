@@ -14,7 +14,6 @@ El modelo estara dividido de la siguiente manera:
 
 ### Configuración del ambiente: 
 Utilizaremos el Jupyter Notebook que ofrece Google Colaboratory, también necesitarás instalar algunas librerías de Python que son esenciales para este proyecto, como: <br>
-<br>
 - Numpy 
 - Pandas 
 - Matplotlib
