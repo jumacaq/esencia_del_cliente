@@ -59,27 +59,27 @@ En esta fase utilizaré una forma de codificar las variables categóricas para q
 El algoritmo recomendado para la clusterización es KMeans, para hallar el mejor número de clusters.
 
 Validación
-2. Número de clusters: Debes instanciar de 3 a máximo 10 clusters con el(los) algoritmo(s) seleccionado(s), utilizando X_std y obtener cómo mínimo el puntaje de Silhouette, aunque te recomiendo utilizar otras métricas como Davies-Bouldin y Calinski and Harabasz para que puedas decidir cuál es la mejor configuración para el número de clusters.
-
+* Número de clusters: Debes instanciar de 3 a máximo 10 clusters con el(los) algoritmo(s) seleccionado(s), utilizando X_std y obtener el puntaje de Silhouette, junto a otras métricas como Davies-Bouldin y Calinski and Harabasz para decidir cuál es la mejor configuración para el número de clusters.
 Restricciones: (El puntaje mínimo de Silhouette debe ser de 0.50; el de Davies-Bouldin máximo de 0.75; y el de CalinskiHarabasz, el número más alto posible.)
+Luego haremos una visualización para observar la regla del codo y luego mediante una fórmula matematica determinaremos el mejor número de clusters para nuestro modelo.
 
-3. Estructura: Debes evaluar la estructura de los clusters tomando como referencia una baseline. Para generar la baseline, vamos a generar números aleatorios con el módulo random de numpy con las mismas dimensiones de tu dataset X_std y lo vas a almacenar en una variable llamada random_data y vas a repetir el paso 2. Analiza los puntajes da la(s) métrica(s) utilizada y asegúrate de que tu X_std tiene un desempeño muy superior al de random_data.
+* Estructura: Evaluaremos la estructura de los clusters tomando como referencia una baseline. Para generar la baseline, vamos a generar números aleatorios con el módulo random de numpy con las mismas dimensiones del dataset X_std y lo almacenaré en una variable llamada random_data y luego voy a repetir la validación. Analizaré los puntajes da las métricas utilizadas para asegurar que el X_std tenga un desempeño muy superior al de random_data.
 
-4. Estabilidad: Finalmente, debes evaluar la estabilidad de los clusters con el número de clusters seleccionado en el paso 2. Para ello, debes segmentar X_std en 3 o 5 partes iguales, (puedes apoyarte en la función array_split() de numpy, y almacenar cada fragmento del dataset en una variable llamada set_1, set_2, ..., set_n) y repetir los pasos de validación para el número de clusters escogido en cada uno de los sets. Aquí lo verdaderamente importante es que los puntajes no presenten una variación mayor a ±5% entre sí. Esto va a garantizar que hay homogeneidad en la composición de los clusters.
+* Estabilidad: Finalmente, evaluaré la estabilidad de los clusters con el número de clusters seleccionado en la validación. Para ello, segmentaré X_std en 3 partes iguales, (me apoyaré en la función array_split() de numpy, y almacenaré cada fragmento del dataset en una variable llamada set_1, set_2, ..., set_n) y repetir los pasos de validación para el número de clusters escogido en cada uno de los sets. Aquí lo verdaderamente importante es que los puntajes no presenten una variación mayor a ±5% entre sí. Esto va a garantizar que hay homogeneidad en la composición de los clusters.
 
-Si has logrado llevar a cabo con éxito los pasos anteriores, puedes avanzar a la próxima fase. En caso contrario, verifica nuevamente las variables: añade, remueve, cambia por otras, y repite de nuevo los pasos de la tarjeta anterior para poder repetir los pasos de esta tarjeta hasta que obtengas los resultados sugeridos.
+* Instanciando la mejor configuración de clusters: 
+  Voy a instanciar el algoritmo de clusterización una vez , con la configuración escogida, y crearé un nuevo atributo en el dataset datos_raw llamado 'cluster' para almacenar los labels de los clusters.
+  Luego haré varios gráficos de dispersión para comparar las variables añadiendo una tercera dimensión con los clusters en el parámetro hue del gráfico. Luego haré la descripción de los hallazgos en cada gráfico.
 
-Instanciando la mejor configuración de clusters
-5. Vas a instanciar el algoritmo de clusterización una vez , con la configuración escogida, y vas a crear un nuevo atributo en el dataset datos_raw llamado 'cluster' para almacenar los labels de los clusters.
 
-6. Vas a realizar varios gráficos de dispersión para comparar las variables añadiendo una tercera dimensión con los clusters en el parámetro hue del gráfico. Trata de describir tus observaciones. Por ejemplo: En el cluster 0, de color rojo, se encuentran agrupados los clientes que gastan más dinero en productos no comestibles.
-
-Repite el paso anterior hasta que puedas obtener varias descripciones de cada uno de los clusters..<br>
 <br>
 
 ### Análisis e interpretación de clusters: 
-Finalmente, ahora que se tienen: la extracción de información,  la limpieza de datos, la visualización, y el algoritmo de decisión, es hora de automatizar el proceso. Se utiliza la librería de Python "time" para ejecutar el algoritmo de decisión cada 5 minutos y actualizar el gráfico, además del método clear_output para limpiar el gráfico antes de volver a iniciar el ciclo.<br>
+* Los clusters generados tienen una descripción y ahora es el momento de analizar cada una da las descripciones.
+ Crearé una celda de texto con el resultado consolidado de mi análisis.
+* Aquí voy a elaborar una serie de recomendaciones de estrategias para personalizar la experiencia de los clientes en cada uno de los clusters; 
+Aquí la idea es proponer acciones para los clientes según sus características de consumo.<br>
 
-#aluraChallengeRobotTrading.
+#AluraChallengeEsenciadelCliente  #AluraLatam
 <br>
 
